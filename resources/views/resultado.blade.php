@@ -9,12 +9,35 @@
 
 </head>
 <body>
+
     <div class="container">
     <h3>O resultado do seu indice é: </h3>  
     <h1>{{ $imc }}</h1> 
-    <a href="/">Voltar</a>
-    </div>
+    <hr>
+    <h1>Você está com: 
+    @if ($imc < 18.5 )
+    <h1>Baixo peso!</h1>
+    
+    @elseif ($imc >= 18.5 && $imc <= 24.99)
+    <h1>Peso normal!</h1>
 
+    @elseif ($imc >= 25 && $imc < 29.99)
+    <h1>Excesso de peso!</h1>
+
+    @elseif ($imc >= 30 && $imc < 34.99)
+    <h1>Obesidade Classe I! </h1>
+
+    @elseif ($imc >= 35 && $imc < 39.99)
+    <h1>Obesidade Classe II!</h1>
+
+    @elseif ($imc > 40)
+    <h1>Obesidade Mórbida!</h1>
+
+    @endif
+</h1>
+    <a class="btn btn-primary" href="/">Voltar</a>
+  
+    </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

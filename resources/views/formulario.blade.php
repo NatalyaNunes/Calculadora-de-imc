@@ -17,7 +17,7 @@
         <input type="text" step="0.1" name="peso" class="form-control" id="peso" >
         </div>
         <div class="mb-3">
-        <label for="altura" class="form-label">Altura: (cm)</label>
+        <label for="altura" class="form-label">Altura:</label>
         <input type="text" name="altura" class="form-control" id="altura">
         </div>
         <button type="submit" class="btn btn-primary">Calcular</button>
